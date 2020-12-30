@@ -572,7 +572,7 @@ div.cs-select span {
 
 #fh5co-blog-section, #fh5co-features, #fh5co-popular-properties, #fh5co-properties, #fh5co-testimonial, #fh5co-about, #fh5co-contact, .fh5co-content-section {
   clear: both;
-  padding: 7em 0; }
+  padding: 4em 0; }
 @media screen and (max-width: 768px) {
   #fh5co-blog-section, #fh5co-features, #fh5co-popular-properties, #fh5co-properties, #fh5co-testimonial, #fh5co-about, #fh5co-contact, .fh5co-content-section {
     padding: 4em 0; } }
@@ -867,12 +867,13 @@ div.cs-select span {
   .fh5co-testimonial, .fh5co-team {
     border-right: 0;
     margin-bottom: 80px; } }
-.fh5co-testimonial h2, .fh5co-team h2 {
-  font-size: 16px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-weight: bold;
-  margin-bottom: 50px; }
+#services h3 {
+    font-size: 40px;
+  font-weight: 400;
+  position: relative;
+  color: #44C662;
+  margin-bottom: 20px; 
+}
 .fh5co-testimonial figure, .fh5co-team figure {
   position: relative;
   top: 0px;
@@ -1284,8 +1285,10 @@ box-shadow: 17px 10px 20px 0px rgba(0,0,0,0.75);
 /*# sourceMappingURL=style.css.map */
 
 /*  SERVICES SECTION*/
-
-#services{
-  padding: 20px 0px;
+.service-container{
+  width: 90%;
+  margin-top: 50px;
 }
-#
+.service-container h4{
+  margin-top: 10px;
+}
