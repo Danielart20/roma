@@ -165,15 +165,15 @@
 						  while($blog = mysqli_fetch_assoc($result)) {
 
 					?>
-					<div class="col-lg-4 col-md-4 col-sm-6 anima">
-						<div class="fh5co-blog animate-box">
+					<div class="col-lg-4 col-md-4 col-sm-6 anima" onclick="window.location.href='blogs.php?id='+<?= $blog['cod_blog']; ?>">
+						<div class="fh5co-blog animate-box" >
 							<a href="#"><img class="img-responsive" src="<?= $blog['imagen_blog']; ?>" alt=""></a>
 							<div class="blog-text">
 								<div class="prod-title">
 									<h3><a href="#"><?= $blog["nombre_blog"] ?></a></h3>
 									<span class="posted_by"><?= $blog["fecha_blog"] ?></span>
 									<p class="descp"><?= $blog["descripcion_blog"] ?>.</p>
-									<p><a href="#">Learn More...</a></p>
+									<p><a href="#">Leer más...</a></p>
 								</div>
 							</div> 
 						</div>
