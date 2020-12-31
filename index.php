@@ -106,7 +106,7 @@
 				</div>
 				<div class="row">
 					<?php include 'assets/conexion.php';
-						$sql = "SELECT * FROM propiedades";
+						$sql = "SELECT * FROM propiedades ORDER BY cod_propiedad LIMIT 0,3";
 						$result = mysqli_query($conn, $sql);
 						if (mysqli_num_rows($result) > 0) {
 						  // output data of each row
@@ -118,7 +118,7 @@
 					}
 
 					?>
-					<div class="col-md-4 animate-box">
+					<div class="col-md-4 animate-box" onclick="window.location.href='propiedades.php?id='+<?= $row['cod_propiedad']; ?>">
 						<div class="property">
 							<a href="#" class="fh5co-property" style="background-image: url(<?= $row['imagenp_propiedad'] ?>);">
 								<span class="status"><?= $tipo ?></span>
