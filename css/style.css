@@ -969,7 +969,9 @@ div.cs-select span {
 
 #footer {
   background: #393e46;
-  padding: 60px 0 40px; }
+  padding: 60px 0 40px; 
+  margin-top: 100px;
+}
 #footer p {
   color: rgba(255, 255, 255, 0.7);
   font-size: 14px; }
@@ -1324,4 +1326,10 @@ box-shadow: 17px 10px 20px 0px rgba(0,0,0,0.75);
 .detalles li{
   display: inline-block;
   margin: 0.5rem 1rem 0 0;
+}
+.font-propiedad{
+  font-size: 2em;
+}
+.de{
+  font-weight: 600;
 }
