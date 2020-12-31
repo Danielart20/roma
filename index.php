@@ -101,67 +101,47 @@
 				<div class="row">
 					<div class="col-md-12 text-center heading-section animate-box">
 						<h3>Nuevas propiedades</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit est facilis maiores, perspiciatis accusamus asperiores sint consequuntur debitis.</p>
+						<p>Estas son algunas de las propiedades más recientes.</p>
 					</div>
 				</div>
 				<div class="row">
+					<?php include 'assets/conexion.php';
+						$sql = "SELECT * FROM propiedades";
+						$result = mysqli_query($conn, $sql);
+						if (mysqli_num_rows($result) > 0) {
+						  // output data of each row
+						  while($row = mysqli_fetch_assoc($result)) {
+						  if($row["cod_tipo"] == 1){
+						  $tipo = "Alquiler";
+						}else{
+							$tipo = "Venta";
+					}
+
+					?>
 					<div class="col-md-4 animate-box">
 						<div class="property">
-							<a href="#" class="fh5co-property" style="background-image: url(images/property-1.jpg);">
-								<span class="status">Sale</span>
+							<a href="#" class="fh5co-property" style="background-image: url(<?= $row['imagenp_propiedad'] ?>);">
+								<span class="status"><?= $tipo ?></span>
 								<ul class="list-details">
-									<li>2000 ft sq<li>
-									<li>5 Bedroom:</li>
-									<li>4 Bathroom:</li>
-									<li>3 Garage:</li>
+									<li><?= $row["area_propiedad"] ?> m2<li>
+									<li>Dormitorios: <?= $row["habita_propiedad"] ?></li>
+									<li>Baños: <?= $row["ban_propiedad"] ?></li>
 								</ul>
 							</a>
 							<div class="property-details">
-								<h3>Properties Near in Beach</h3>
-								<span class="price">$3,000</span>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit est facilis maiores.</p>
-								<span class="address"><i class="icon-map"></i>Thomas Street, St. Louis, MO 8990, USA</span>
+								<h3><?= $row["nombre_propiedad"] ?> </h3>
+								<span class="price"><?= $row["precio_propiedad"] ?> €</span>
+								<p class="descp"><?= $row["descripcion_propiedad"] ?> .</p>
+								<span class="address"><i class="icon-map"></i><?= $row["calle_propiedad"] ?> </span>
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4 animate-box">
-						<div class="property">
-							<a href="#" class="fh5co-property" style="background-image: url(images/property-2.jpg);">
-								<span class="status">Rent</span>
-								<ul class="list-details">
-									<li>2000 ft sq<li>
-									<li>5 Bedroom:</li>
-									<li>4 Bathroom:</li>
-									<li>3 Garage:</li>
-								</ul>
-							</a>
-							<div class="property-details">
-								<h3>Modern House at NZ</h3>
-								<span class="price">$200/mos</span>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit est facilis maiores.</p>
-								<span class="address"><i class="icon-map"></i>Thomas Street, St. Louis, MO 8990, USA</span>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 animate-box">
-						<div class="property">
-							<a href="#" class="fh5co-property" style="background-image: url(images/property-3.jpg);">
-								<span class="status">Sale</span>
-								<ul class="list-details">
-									<li>2000 ft sq<li>
-									<li>5 Bedroom:</li>
-									<li>4 Bathroom:</li>
-									<li>3 Garage:</li>
-								</ul>
-							</a>
-							<div class="property-details">
-								<h3>Bonggalo House</h3>
-								<span class="price">$3,000</span>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit est facilis maiores.</p>
-								<span class="address"><i class="icon-map"></i>Thomas Street, St. Louis, MO 8990, USA</span>						
-							</div>
-						</div>
-					</div>
+					<?php			  
+						}
+						} else {
+						  echo "0 results";
+						}
+						?>
 				</div>
 			</div>
 		</div>
@@ -171,55 +151,39 @@
 				<div class="row">
 					<div class="col-md-12 text-center heading-section animate-box">
 						<h3>Blog recientes</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit est facilis maiores, perspiciatis accusamus asperiores sint consequuntur debitis.</p>
+						<p>Aquí hay 3 blogs de los más recientes</p>	
 					</div>
 				</div>
 			</div>
 			<div class="container">
 				<div class="row row-bottom-padded-md">
+					<?php include 'assets/conexion.php';
+						$sql = "SELECT * FROM blog ORDER BY cod_blog LIMIT 0,3";
+						$result = mysqli_query($conn, $sql);
+						if (mysqli_num_rows($result) > 0) {
+						  // output data of each row
+						  while($blog = mysqli_fetch_assoc($result)) {
+
+					?>
 					<div class="col-lg-4 col-md-4 col-sm-6 anima">
 						<div class="fh5co-blog animate-box">
-							<a href="#"><img class="img-responsive" src="images/property-4.jpg" alt=""></a>
+							<a href="#"><img class="img-responsive" src="<?= $blog['imagen_blog']; ?>" alt=""></a>
 							<div class="blog-text">
 								<div class="prod-title">
-									<h3><a href="#">Properties for sale</a></h3>
-									<span class="posted_by">Sep. 15th</span>
-									<span class="comment"><a href="">21<i class="icon-bubble2"></i></a></span>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+									<h3><a href="#"><?= $blog["nombre_blog"] ?></a></h3>
+									<span class="posted_by"><?= $blog["fecha_blog"] ?></span>
+									<p class="descp"><?= $blog["descripcion_blog"] ?>.</p>
 									<p><a href="#">Learn More...</a></p>
 								</div>
 							</div> 
 						</div>
 					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6 anima">
-						<div class="fh5co-blog animate-box">
-							<a href="#"><img class="img-responsive" src="images/property-2.jpg" alt=""></a>
-							<div class="blog-text">
-								<div class="prod-title">
-									<h3><a href="#">Modern Home</a></h3>
-									<span class="posted_by">Sep. 15th</span>
-									<span class="comment"><a href="">21<i class="icon-bubble2"></i></a></span>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-									<p><a href="#">Learn More...</a></p>
-								</div>
-							</div> 
-						</div>
-					</div>
-					<div class="clearfix visible-sm-block"></div>
-					<div class="col-lg-4 col-md-4 col-sm-6 anima">
-						<div class="fh5co-blog animate-box">
-							<a href="#"><img class="img-responsive" src="images/property-3.jpg" alt=""></a>
-							<div class="blog-text">
-								<div class="prod-title">
-									<h3><a href="#">15% Deal Discount For House</a></h3>
-									<span class="posted_by">Sep. 15th</span>
-									<span class="comment"><a href="">21<i class="icon-bubble2"></i></a></span>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-									<p><a href="#">Learn More...</a></p>
-								</div>
-							</div> 
-						</div>
-					</div>
+					<?php			  
+						}
+						} else {
+						  echo "0 results";
+						}
+						?>
 					<div class="clearfix visible-md-block"></div>
 				</div>
 			</div>

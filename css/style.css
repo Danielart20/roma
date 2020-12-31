@@ -1311,3 +1311,8 @@ box-shadow: 17px 10px 20px 0px rgba(0,0,0,0.75);
   transform: scale(1.05);
   transition-duration: 0.5s;
 }
+.descp{
+      text-overflow: ellipsis;
+      overflow-y: hidden;
+      max-height: 50px;
+}
