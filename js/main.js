@@ -211,10 +211,24 @@
 }());
 
 // Barra de busqueda con autocompletado
+$.ajax({
+  url:'assets/localidades.php',
+  method:'GET',
+  success:function(data)
+  {
+    var data = JSON.parse(data);
+    var municipios = [];
+    for (let i = 0; i < data.length; i++) {
+      municipios.push(data[i].localizacion_propiedad);
+      
+    }
+    console.log(municipios);
+    
+    autocomplete(document.getElementById("myInput"), municipios);
+  },
+})
 
 
-var municipios = ["Aguimes", "Galdar", "Vecindario", "Vedo"];
-autocomplete(document.getElementById("myInput"), municipios);
 
 
 
