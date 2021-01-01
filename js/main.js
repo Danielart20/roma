@@ -411,3 +411,33 @@ document.addEventListener("click", function (e) {
     closeAllLists(e.target);
 });
 } 
+//BUSCADOR CON AJAX
+
+var form = document.getElementById("search");
+
+
+function buscador(event){
+  event.preventDefault();
+  var tipo_result = document.getElementsByName("tipo");
+  for (var i = 0, length = tipo_result.length; i < length; i++) {
+    if (tipo_result[i].checked) {
+       var tipo = tipo_result[i].value;
+    }
+  }
+  var localidad = document.getElementById("myInput").value;
+
+  var datos = {"tipo":tipo, "localidad":localidad};
+
+  $.ajax({
+            url:'assets/buscador.php',
+            method:'POST',
+            data: datos,
+            success:function(data)
+            {
+              var data = JSON.parse(data);
+              document.getElementById("propi").innerHTML = data;
+            },
+          })
+}
+
+form.addEventListener('submit', buscador);
