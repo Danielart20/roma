@@ -21,13 +21,16 @@ if (mysqli_num_rows($result) > 0) {
 .sticky-wrapper{
   height:150px !important;
 }
+body{
+  background: rgba(0, 0, 0, 0.04);
+}
 
 </style>
 <div class="container">
   <h2 class=" font-propiedad"><?= $row["nombre_propiedad"]; ?></h2>
   <span class="font-propiedad">Ref: <?= $row["ref_propiedad"]; ?></span>
 
-  <ul class="detalles">
+  <ul class="detalles mb-4">
     <li><i class="fas fa-bed"></i> <?= $row["habita_propiedad"]; ?> habitaciones</li>
     <li><i class="fas fa-bath"></i> <?= $row["ban_propiedad"]; ?> baños</li>
     <li><i class="fas fa-chart-area"></i> <?= $row["area_propiedad"]; ?> m2</li>
@@ -121,21 +124,21 @@ if (mysqli_num_rows($result) > 0) {
 
 <div class="container">
 <div class="row mt-5 d-flex justify-content-center">
-  <div class="col-md-3 font-propiedad">Precio</div>
-  <div class="col-md-9 font-propiedad align-self-center"><?=$row["precio_propiedad"]; ?> €</div>
+  <div class="col-md-3 de">Precio</div>
+  <div class="col-md-9 font-propiedad de align-self-center"><?=$row["precio_propiedad"]; ?> €</div>
 </div>
 <div class="row mt-5">
-  <div class="col-md-3 font-propiedad">Descripion</div>
-  <div class="col-md-9 de align-self-center"><?= nl2br($row["descripcion_propiedad"]); ?></div>
+  <div class="col-md-3 de">Descripion</div>
+  <div class="col-md-9 font-propiedad align-self-center"><?= nl2br($row["descripcion_propiedad"]); ?></div>
 </div>
 <div class="row mt-5">
-  <div class="col-md-3 font-propiedad">Extras</div>
-  <div class="col-md-9 de align-self-center"><?php for ($i=0; $i < count($extras) ; $i++) { 
+  <div class="col-md-3 de">Extras</div>
+  <div class="col-md-9 font-propiedad align-self-center"><?php for ($i=0; $i < count($extras) ; $i++) { 
                           echo $extras[$i] . " ";
                           } ?>
   </div>
   <div class="row mt-5">
-    <div class="col-md-3 font-propiedad ml-2">Ubicacion aproximada del inmueble</div>
+    <div class="col-md-3 de font-propiedad ml-2">Ubicacion aproximada del inmueble</div>
     <div class="col-md-8"><iframe width='100%' height='600' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' src='https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=<?= $calle; ?>,%20"<?= $row["codpostal_propiedad"];?>"+(Mi%20nombre%20de%20egocios)&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed'></iframe></div>
 </div>
 </div>

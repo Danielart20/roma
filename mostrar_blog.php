@@ -18,6 +18,9 @@ if (mysqli_num_rows($result) > 0) {
 .sticky-wrapper{
   height:150px !important;
 }
+body{
+  background: rgba(0, 0, 0, 0.04);
+}
 
 </style>
 
@@ -27,7 +30,7 @@ if (mysqli_num_rows($result) > 0) {
                 <img src="<?= $row["imagen_blog"]; ?>" alt="imagen blog" width="300">
             </div>
             <div class="col-md-8">
-                <h3><?= $row["nombre_blog"];?></h3>
+                <h3 class="de"><?= $row["nombre_blog"];?></h3>
                 <p><?= nl2br($row["descripcion_blog"]); ?></p>
             </div>
         </div>

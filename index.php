@@ -118,7 +118,7 @@
 					}
 
 					?>
-					<div class="col-md-4 animate-box" onclick="window.location.href='propiedades.php?id='+<?= $row['cod_propiedad']; ?>">
+					<div class="col-md-4 animate-box" onclick="window.location.href='mostrar_propiedad.php?id='+<?= $row['cod_propiedad']; ?>">
 						<div class="property">
 							<a href="#" class="fh5co-property" style="background-image: url(<?= $row['imagenp_propiedad'] ?>);">
 								<span class="status"><?= $tipo ?></span>
@@ -165,7 +165,7 @@
 						  while($blog = mysqli_fetch_assoc($result)) {
 
 					?>
-					<div class="col-lg-4 col-md-4 col-sm-6 anima" onclick="window.location.href='blogs.php?id='+<?= $blog['cod_blog']; ?>">
+					<div class="col-lg-4 col-md-4 col-sm-6 anima" onclick="window.location.href='mostrar_blog.php?id='+<?= $blog['cod_blog']; ?>">
 						<div class="fh5co-blog animate-box" >
 							<a href="#"><img class="img-responsive" src="<?= $blog['imagen_blog']; ?>" alt=""></a>
 							<div class="blog-text">
