@@ -60,7 +60,7 @@
 			disableHI: true
 		});
 
-	};
+  };
 
 	//Date Picker
 

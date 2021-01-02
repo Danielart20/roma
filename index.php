@@ -1,4 +1,9 @@
-		<?php include 'html/menu.html';?>
+		<?php 
+		$inicio = "active";
+		$propiedades = "";
+		$blog = "";
+		$contact = "";
+		include 'html/menu.html';?>
 		<!-- end:header-top -->
 		<aside id="fh5co-hero" class="js-fullheight">
 			<div class="flexslider js-fullheight">

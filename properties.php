@@ -1,4 +1,9 @@
-		<?php include 'html/menu.html';?>
+		<?php 
+		$inicio = "";
+		$propiedades = "active";
+		$blog = "";
+		$contact = "";
+		include 'html/menu.html';?>
 
 
 		<!-- end:header-top -->
@@ -32,7 +37,7 @@
 								$tipo = "Venta";
 						}
 					?>
-					<div class="col-md-4" onclick="window.location.href='mostrar_propiedad.php?id='+<?= $row['cod_propiedad']; ?>">
+					<div class="col-md-4" onclick="window.location.href='mostrar_propiedad.php?id='<?= $row['cod_propiedad']; ?>">
 						<div class="property">
 							<a href="#" class="fh5co-property" style="background-image: url(<?= $row['imagenp_propiedad'];?>)">
 								<span class="status"><?= $tipo ?></span>

@@ -3,6 +3,10 @@ if(!isset($_GET["id"])){
   Header('Location: index.php');
   die();
 }
+$inicio = "";
+$propiedades = "active";
+$blog = "";
+$contact = "";
 include 'html/menu.html';
 require 'assets/conexion.php';
 $id = $_GET["id"];
