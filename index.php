@@ -14,7 +14,7 @@
 			   			<div class="row">
 				   			<div class="col-md-12 text-center js-fullheight slider-text">
 			   				<div class="slider-text-inner">
-			   								   		<div class="difuminado"></div>
+			   						<div class="difuminado"></div>
 			   						<h2 class="heading-title ">LOOK & FIND <br>Siete Palmas</h2>
 			   						<p class="fh5co-lead">Modelo de Consultoría Inmobiliaria    que ofrece <br> servicio de asesoramiento personalizado  y  especializado.</p>
 			   				</div>
@@ -50,7 +50,7 @@
 					<img src="images/foto2.png" alt="foto" height="500">
 				</div>
 				<div class="col-md-6 d-flex justify-content-center flex-column">
-					<h2>Sobre mi</h2>
+					<h3 class="">Sobre mi</h3>
 					<p>Mi nombre es <strong>Roma Nool</strong>, ASESORA INMOBILIARIA especializada en la zona de <strong>Las Canteras</strong>. Como Agente Asociada pertenezco a una red líder del sector inmobiliario en servicio de <strong>calidad</strong>.</p>
 					<p>Soy muy consciente de que la venta de su propiedad le pueda causar dudas, temores, indecisiones, preocupación y al mismo tiempo, ansiedad. Es una decisión <strong>muy importante</strong>.</p>
 					<p>Mi consejo es que su propiedad sea comercializada con un asesor/a profesional y darle salida al mercado con un precio de venta adecuado según el previo estudio de mercado y el Informe de Valoración del Inmueble (Look & Find Siete Palmas).</p>
@@ -60,19 +60,18 @@
 			</div>
 		</div>
 		</div>
-
-		<div id="services" class="fh5co-section-gray">
+		<div id="services" class="fh5co-section-gray pt-5 pb-5">
 			<div class="container">
 				<h3 class="text-center">Servicios</h3>
 				<div class="row">
-					<div class="col-md-6 d-flex justify-content-center">
+					<div class="col-md-6 d-flex justify-content-center animate-box">
 						<div class="service-container d-flex flex-column align-items-center justify-content-center">
 							<i class="fas fa-user-shield fa-5x" style="color:#043785;"></i>
 							<h4><strong>Exclusividad</strong></h4>
 							<p class="text-center">Cartera limitada de inmuebles; conocimiento sobre las propiedades que trabajo, lo que me permite darle a usted un tratamiento diferenciado y exclusivo. </p>
 						</div>
 					</div>
-					<div class="col-md-6 d-flex justify-content-center">
+					<div class="col-md-6 d-flex justify-content-center animate-box">
 						<div class="service-container d-flex flex-column align-items-center justify-content-center">
 							<i class="fas fa-lock fa-5x" style="color:#043785;"></i>
 							<h4><strong>Seguridad</strong></h4>
@@ -80,15 +79,15 @@
 						</div>
 					</div>
 					</div>
-					<div class="row mt-5">
-					<div class="col-md-6 d-flex justify-content-center">
+					<div class="row mt-5 pb-5">
+					<div class="col-md-6 d-flex justify-content-center animate-box">
 						<div class="service-container d-flex flex-column align-items-center justify-content-center">
 							<i class="fas fa-users fa-5x" style="color:#043785;"></i>
 							<h4 class="text-center"><strong>Exclusiva abierta y colaboración</strong></h4>
 							<p class="text-center">El sistema de exclusivas abiertas y colaboración con otras agencias ofrece  mejores resultados de venta. </p>
 						</div>
 					</div>					
-					<div class="col-md-6 d-flex justify-content-center">
+					<div class="col-md-6 d-flex justify-content-center animate-box">
 						<div class="service-container d-flex flex-column align-items-center justify-content-center">
 							<i class="fas fa-people-carry fa-5x" style="color:#043785;"></i>
 							<h4><strong>Confianza</strong></h4>
@@ -97,11 +96,13 @@
 					</div>
 				</div>
 
+			</div>
 		</div>
+
 
 		
 
-		<div id="fh5co-properties">
+		<div id="fh5co-properties" class="pt-5 pb-5   fh5co-section-gray">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 text-center heading-section animate-box">
@@ -123,8 +124,8 @@
 					}
 
 					?>
-					<div class="col-md-4 animate-box" onclick="window.location.href='mostrar_propiedad.php?id='+<?= $row['cod_propiedad']; ?>">
-						<div class="property">
+					<div class="col-md-4 animate-box " onclick="window.location.href='mostrar_propiedad.php?id='+<?= $row['cod_propiedad']; ?>">
+						<div class="property shadow">
 							<a href="#" class="fh5co-property" style="background-image: url(<?= $row['imagenp_propiedad'] ?>);">
 								<span class="status"><?= $tipo ?></span>
 								<ul class="list-details">
@@ -133,7 +134,7 @@
 									<li>Baños: <?= $row["ban_propiedad"] ?></li>
 								</ul>
 							</a>
-							<div class="property-details">
+							<div class="property-details p-4">
 								<h3><?= $row["nombre_propiedad"] ?> </h3>
 								<span class="price"><?= $row["precio_propiedad"] ?> €</span>
 								<p class="descp"><?= $row["descripcion_propiedad"] ?> .</p>
@@ -151,12 +152,14 @@
 			</div>
 		</div>
 
-		<div id="fh5co-blog-section">
+
+
+		<div id="fh5co-blog-section" class="pt-5 pb-5 fh5co-section-gray">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 text-center heading-section animate-box">
 						<h3>Blog recientes</h3>
-						<p>Aquí hay 3 blogs de los más recientes</p>	
+						<p class="text-light">Aquí puedes ver algunos de mis blogs</p>	
 					</div>
 				</div>
 			</div>
@@ -171,7 +174,7 @@
 
 					?>
 					<div class="col-lg-4 col-md-4 col-sm-6 anima" onclick="window.location.href='mostrar_blog.php?id='+<?= $blog['cod_blog']; ?>">
-						<div class="fh5co-blog animate-box" >
+						<div class="fh5co-blog animate-box shadow" >
 							<a href="#"><img class="img-responsive" src="<?= $blog['imagen_blog']; ?>" alt=""></a>
 							<div class="blog-text">
 								<div class="prod-title">
@@ -193,46 +196,53 @@
 				</div>
 			</div>
 		</div>
+
+
+		<div class="fh5co-section-gray">
 		<!-- fh5co-blog-section -->
-		<div id="fh5co-contact" class="fh5co-contact container">
+		<div id="fh5co-contact" class="fh5co-contact container pt-5 pb-5">
 			<div class="row pt-5">
 			<div class="col-md-6 col-xs-12">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12 text-center heading-section animate-box">
-							<h3>Ask an agent, We're here to help 24/7</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit est facilis maiores, perspiciatis accusamus asperiores sint consequuntur debitis.</p>
+						<h3>Información de contacto</h3>
+						<p>Estaré encantada de AYUDAR a las personas a las que usted me recomiende.<br>
+							¡Gracias por su confianza!</p>
 						</div>
 					</div>
+					<form action="">
 					<div class="row">
 						<div class="col-md-12 animate-box">
 							<div class="row">
 								<div class="col-md-12">
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Name">
+										<input type="text" class="form-control" placeholder="Name" required>
 									</div>
 								</div>
 								<div class="col-md-12">
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Email">
+										<input type="text" class="form-control" placeholder="Email" required>
 									</div>
 								</div>
 								<div class="col-md-12">
 									<div class="form-group">
-										<textarea name="" class="form-control" id="" cols="30" rows="7" placeholder="Message"></textarea>
+										<textarea name="" class="form-control" id="" cols="30" rows="7" placeholder="Message" required></textarea>
 									</div>
 								</div>
 								<div class="col-md-12">
 									<div class="form-group">
-										<input type="submit" value="Send Message" class="btn btn-primary">
+										<input type="submit" value="Enviar mensaje" class="btn btn-primary">
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
+					</form>
 				</div>
 			</div>
 			<div class="col-md-6 img-form"><img src="images/foto1.png" alt="foto personal" class="img-fluid"></div>
 		</div>
+					</div>
 		</div>
 		<?php include 'html/pie.html';?>

@@ -573,10 +573,10 @@ div.cs-select span {
 
 #fh5co-blog-section, #fh5co-features, #services,#fh5co-popular-properties, #fh5co-properties, #fh5co-testimonial, #fh5co-about, #fh5co-contact, .fh5co-content-section {
   clear: both;
-  padding-top: 9em; }
+   }
 @media screen and (max-width: 768px) {
   #fh5co-blog-section, #fh5co-features, #services, #fh5co-popular-properties, #fh5co-properties, #fh5co-testimonial, #fh5co-about, #fh5co-contact, .fh5co-content-section {
-    padding-top: 9em; } }
+    padding-top: 4em; } }
 
 #fh5co-properties label{
     width: 190px;
@@ -623,8 +623,8 @@ div.cs-select span {
   padding-bottom: 1em;
   margin-bottom: 4em; }
 .heading-section h3 {
-  font-size: 40px;
-  font-weight: 400;
+  font-size: 50px;
+  font-weight: 600;
   position: relative;
   color: #b3cb18; }
 .heading-section p {
@@ -869,11 +869,11 @@ div.cs-select span {
     border-right: 0;
     margin-bottom: 80px; } }
 #services h3 {
-    font-size: 40px;
-  font-weight: 400;
+  font-size: 50px;
+  font-weight: 600;
   position: relative;
   color: #b3cb18;
-  margin-bottom: 20px; 
+  margin-bottom: 60px; 
 }
 .fh5co-testimonial figure, .fh5co-team figure {
   position: relative;
@@ -970,7 +970,6 @@ div.cs-select span {
 #footer {
   background: #393e46;
   padding: 60px 0 40px; 
-  margin-top: 100px;
 }
 #footer p {
   color: rgba(255, 255, 255, 0.7);
@@ -1288,18 +1287,21 @@ box-shadow: 17px 10px 20px 0px rgba(0,0,0,0.75);
 /*# sourceMappingURL=style.css.map */
 
 /*  SERVICES SECTION*/
+
+
 .service-container{
-  width: 60%;
+  width: 100%;
   height: 100%;
-  margin-top: 50px;
   border: 1px solid #848484;
   border-radius: 20px;
   background: white;
-  padding: 0px 10px;
+  padding: 10px;
   box-shadow: 0 0 10px 5px;
 }
 .service-container h4{
   margin-top: 10px;
+  width: 100%;
+  text-align: center;
 }
 .difuminado{
   background: black;
@@ -1333,4 +1335,19 @@ box-shadow: 17px 10px 20px 0px rgba(0,0,0,0.75);
 .de{
   font-weight: bold;
   font-size: 2em;
+}
+.scallop-down{
+  height:130px;
+  width:120%;
+  background: #b3cb18;
+  transform: rotate(4deg);
+  transform-origin: 0 0;
+  z-index:-1;
+}
+.shadow{
+  box-shadow: 0 0 10px 5px;
+}
+.sobremi h3{
+  font-size: 40px;
+  font-weight: 600;
 }

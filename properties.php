@@ -37,8 +37,8 @@
 								$tipo = "Venta";
 						}
 					?>
-					<div class="col-md-4" onclick="window.location.href='mostrar_propiedad.php?id='<?= $row['cod_propiedad']; ?>">
-						<div class="property">
+					<div class="col-md-4" onclick="window.location.href='mostrar_propiedad.php?id=<?= $row['cod_propiedad']; ?>'">
+						<div class="property shadow">
 							<a href="#" class="fh5co-property" style="background-image: url(<?= $row['imagenp_propiedad'];?>)">
 								<span class="status"><?= $tipo ?></span>
 								<ul class="list-details">
@@ -47,7 +47,7 @@
 									<li>Baños: <?= $row["ban_propiedad"] ?></li>
 								</ul>
 							</a>
-							<div class="property-details">
+							<div class="property-details p-4">
 								<h3><?= $row["nombre_propiedad"] ?> </h3>
 								<span class="price"><?= $row["precio_propiedad"] ?> €</span>
 								<p class="descp"><?= $row["descripcion_propiedad"] ?> .</p>
