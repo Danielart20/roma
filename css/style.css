@@ -180,7 +180,7 @@ figure {
   line-height: 1.5;
   margin-bottom: 30px;
   font-weight: 300; }
-#fh5co-hero .flexslider .slider-text > .slider-text-inner .status {
+#fh5co-hero .flexslider .slider-text > .slides .status {
   padding: 5px 12px;
   display: inline-block;
   margin-bottom: 20px;
@@ -577,6 +577,9 @@ div.cs-select span {
 @media screen and (max-width: 768px) {
   #fh5co-blog-section, #fh5co-features, #services, #fh5co-popular-properties, #fh5co-properties, #fh5co-testimonial, #fh5co-about, #fh5co-contact, .fh5co-content-section {
     padding-top: 4em; } }
+    #fh5co-blog-section, #fh5co-properties, #fh5co-contact{
+      padding-top: 150px;
+    }
 
 #fh5co-properties label{
     width: 190px;
@@ -616,6 +619,7 @@ div.cs-select span {
   outline: none;
   background: #b3cb18;
 }
+
 .fh5co-section-gray {
   background: rgba(0, 0, 0, 0.04); }
 
@@ -1330,19 +1334,11 @@ box-shadow: 17px 10px 20px 0px rgba(0,0,0,0.75);
   margin: 0.5rem 1rem 0 0;
 }
 .font-propiedad{
-  font-weight: 600;
+  font-weight: 400;
 }
 .de{
   font-weight: bold;
   font-size: 2em;
-}
-.scallop-down{
-  height:130px;
-  width:120%;
-  background: #b3cb18;
-  transform: rotate(4deg);
-  transform-origin: 0 0;
-  z-index:-1;
 }
 .shadow{
   box-shadow: 0 0 10px 5px;
@@ -1350,4 +1346,41 @@ box-shadow: 17px 10px 20px 0px rgba(0,0,0,0.75);
 .sobremi h3{
   font-size: 40px;
   font-weight: 600;
+}
+.port{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.port img{
+  width: 80% !important;
+  height: 80% !important;
+}
+.imagen_portada{
+  padding-top: 150px;
+}
+.text-portada{
+  padding: 20px;
+  border-radius: 10px ;
+}
+.spa{
+  background: #043785;
+  padding: 10px;
+  border-radius: 20px;
+  color: #fff;
+}
+.text-portada h2,p{
+  margin-bottom: 5px !important;
+  font-weight: bold;
+}
+#eng{
+  background: url('images/spain.svg');
+}
+.bo{
+  border-bottom: 1px solid #fff;
+  padding-bottom: 30px;
+}
+#lang{
+padding: 5px;
+border-radius: 10px;
 }

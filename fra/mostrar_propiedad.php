@@ -127,15 +127,15 @@ body{
 <!-- Photoswipe galery END-->
 
 <div class="container">
-<div class="row mt-5 d-flex justify-content-center bo">
+<div class="row mt-5 d-flex justify-content-center">
   <div class="col-md-3 de">Precio</div>
   <div class="col-md-9 font-propiedad de align-self-center"><?=$row["precio_propiedad"]; ?> €</div>
 </div>
-<div class="row mt-5 bo">
+<div class="row mt-5">
   <div class="col-md-3 de">Descripion</div>
   <div class="col-md-9 font-propiedad align-self-center"><?= nl2br($row["descripcion_propiedad"]); ?></div>
 </div>
-<div class="row mt-5 bo">
+<div class="row mt-5">
   <div class="col-md-3 de">Extras</div>
   <div class="col-md-9 font-propiedad align-self-center"><?php for ($i=0; $i < count($extras) ; $i++) { 
                           echo $extras[$i] . " ";

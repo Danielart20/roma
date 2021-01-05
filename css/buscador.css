@@ -6,20 +6,23 @@
   .buscador {
     border: 1px solid transparent;
     background-color: #b3cb18;
-    padding: 10px;
     font-size: 16px;
+    margin-top: -40px;
+    padding: 0;
   }
   .buscador input {
     background-color: #fff;
     width: 100%;
     border: 1px solid #f1f1f1;
     border-radius: 20px;
-    padding: 5px;
+    padding: 10px 10px;
+  }
+  .sub{
+    margin-top: -40px;
   }
   .sub button{
     background-color: #043785;
     color: white;
-    padding: 14px;
   }
 
   .autocomplete-items {
@@ -47,4 +50,10 @@
     /*when navigating through the items using the arrow keys:*/
     background-color: DodgerBlue !important;
     color: #ffffff;
+  }
+  #search h3{
+    padding-bottom: 10px;
+  }
+  #search .row{
+    margin-left: 2px;
   }

@@ -11,20 +11,20 @@
 		<div id="fh5co-properties" class="fh5co-section-gray animate-box">
 			<div class="container">
 				<form autocomplete="off" action="#" id="search">
-					<h3 class="prop">Encuentra lo que buscas</h3>
+					<h3 class="prop">Find what you are looking for</h3>
 					<div class="mt-5 mb-5">
-						<label><input type="radio" value="2"  name="tipo" checked><span class="s">Compra</span></label>
-						<label><input type="radio" value="1"  name="tipo"><span class="s">Alquiler</span></label></div>
+						<label><input type="radio" value="2"  name="tipo" checked><span class="s">Sale</span></label>
+						<label><input type="radio" value="1"  name="tipo"><span class="s">Rent</span></label></div>
 					<div class="row">
 						<div class="col-md-9 autocomplete buscador align-self-center">
-							<input id="myInput" type="text" name="localidad" placeholder="Localidad...">
+							<input id="myInput" type="text" name="localidad" placeholder="Location...">
 						</div>
 						<div class="col-md-3 sub">
-						<button type="submit" class="btn btn-lg mt-5 mb-5"><i class="fa fa-search" aria-hidden="true"></i> Buscar</button></div>
+						<button type="submit" class="btn btn-lg mt-5 mb-5"><i class="fa fa-search" aria-hidden="true"></i> Search</button></div>
 					</div>
 				</form>
 				<div class="row" id="propi">
-					<?php include 'assets/conexion.php';
+					<?php include '../assets/conexion.php';
 						$sql = "SELECT * FROM propiedades";
 						$result = mysqli_query($conn, $sql);
 
@@ -43,8 +43,8 @@
 								<span class="status"><?= $tipo ?></span>
 								<ul class="list-details">
 									<li><?= $row["area_propiedad"] ?> m2<li>
-									<li>Dormitorios: <?= $row["habita_propiedad"] ?></li>
-									<li>Baños: <?= $row["ban_propiedad"] ?></li>
+									<li>bedrooms: <?= $row["habita_propiedad"] ?></li>
+									<li>bathrooms: <?= $row["ban_propiedad"] ?></li>
 								</ul>
 							</a>
 							<div class="property-details p-4">

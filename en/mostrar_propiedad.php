@@ -8,7 +8,7 @@ $propiedades = "active";
 $blog = "";
 $contact = "";
 include 'html/menu.html';
-require 'assets/conexion.php';
+require '../assets/conexion.php';
 $id = $_GET["id"];
 
 $sql = "SELECT * FROM propiedades where cod_propiedad=$id";

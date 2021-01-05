@@ -22,8 +22,6 @@
 			return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
 		}
 	};
-
-
 	// iPad and iPod detection	
 	var isiPad = function(){
 		return (navigator.platform.indexOf("iPad") != -1);
